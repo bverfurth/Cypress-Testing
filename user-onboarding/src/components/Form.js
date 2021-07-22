@@ -85,6 +85,7 @@ export default function Form() {
       <label htmlFor="email">
         Email:
         <input
+          data-cy="email-error-msg"
           type="text"
           name="email"
           onChange={inputChange}
@@ -107,6 +108,7 @@ export default function Form() {
       <label htmlFor="terms">
         Agree to Terms and Conditions:
         <input
+          data-cy="terms"
           type="checkbox"
           name="terms"
           onChange={inputChange}
@@ -115,7 +117,9 @@ export default function Form() {
       </label>
       <br />
       {/* Added submit button for sending form data to server  */}
-      <button disabled={disableButton}>Submit</button>
+      <button id="sumbit" disabled={disableButton}>
+        Submit
+      </button>
     </form>
   );
 }
