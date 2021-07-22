@@ -12,16 +12,18 @@ describe("Form test", () => {
       .should("have.value", "Brandon");
 
     //Email Input Test
-    cy.get('[for="email"] > input').type("brandonverfurth@gmail.com");
+    cy.get('[for="email"] > input')
+      .type("test@gmail.com")
+      .should("have.value", "test@gmail.com");
 
     //Password Input Test
     cy.get('[for="password"] > input').type("password");
 
+    //Checkbox Clicked Test
+    cy.get('[data-cy="terms"]').click().should("have.checked", true);
+
     //Checkbox Test
     cy.get("button#submit").should("not.be.disabled");
-
-    //Checkbox Clicked Test
-    cy.get('[data-cy="terms:]').click().should("have.checked", true);
   });
 
   it("errors displayed", () => {

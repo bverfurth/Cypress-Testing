@@ -117,7 +117,7 @@ export default function Form() {
       </label>
       <br />
       {/* Added submit button for sending form data to server  */}
-      <button id="sumbit" disabled={disableButton}>
+      <button id="submit" disabled={disableButton}>
         Submit
       </button>
     </form>
